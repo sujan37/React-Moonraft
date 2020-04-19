@@ -1,12 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
+import Aux from '../../hoc/Auxiliary'; 
 
 
 
 const Header = () => {
      
     return (
-        <div>Header Component HERE</div>
+        <Aux>
+            <div>Header Component HERE</div>
+        </Aux>
     );
 
 }

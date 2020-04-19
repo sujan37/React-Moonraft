@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import Aux from '../../hoc/Auxiliary';
 
 
 const UserImg = () => {
      
     return (
-        <div>UserImg Component HERE</div>
+        <Aux>
+            <div>UserImg Component HERE</div>
+        </Aux>
     );
 
 }
