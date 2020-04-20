@@ -1,15 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
-import Aux from '../../hoc/Auxiliary'; 
-
+// import Aux from '../../hoc/Auxiliary'; 
+import { StyledBtn } from './HeaderStyle';
 
 
 const Header = () => {
      
     return (
-        <Aux>
+        <>
             <div>Header Component HERE</div>
-        </Aux>
+        </>
     );
 
 }

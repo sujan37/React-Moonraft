@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
-import './App.css';
-import SuccessBtn from './components/SuccessBtn/SuccessBtn';
-import HomePage from './components/HomePage/HomePage';
-import SignUp from './components/SignUp/SignUp';
-import Login from './components/Login/Login';
 import {BrowserRouter,Route,Link,Switch} from 'react-router-dom';
+import './App.css';
+
+
+
+import HomePage from './components/HomePage/HomePage';
+import SignUp from './pages/SignupPage/SignUp';
+import Login from './pages/LoginPage/Login';
+
+//  need to remove
+import UserImg from './commonComponents/UserImg/UserImg';
+import SuccessBtn from './commonComponents/SuccessBtn/SuccessBtn';
+
+// need to remove
 
 class App extends Component {
 
@@ -13,9 +21,17 @@ class App extends Component {
       <BrowserRouter>
         <section>
             <h1>welcome to React Moonraft Task</h1>
-            <SuccessBtn/>
             <HomePage/>
             
+
+            {/* Need to remove  */}
+
+
+
+            <Login/>
+                        
+            {/* Need to remove  */}
+
             <Switch>
                 <Route path="/login" component={Login} />
                 <Route path="/signup" component={SignUp} />

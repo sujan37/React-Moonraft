@@ -1,10 +1,10 @@
 import React from 'react';
-// import styled from 'styled-components';
-// eslint-disable-next-line
-import {Route,Link,Switch } from 'react-router-dom';
-import SignUp from '../SignUp/SignUp';
-import Login from '../Login/Login';
-import Aux from '../../hoc/Auxiliary';
+import styled from 'styled-components';
+import {Route,NavLink,Switch } from 'react-router-dom';
+import Login from '../../pages/LoginPage/Login';
+import SignUp from '../../pages/SignupPage/SignUp';
+import './HomePage.css';
+// import Aux from '../../hoc/Auxiliary';
 
 
 
@@ -12,21 +12,20 @@ import Aux from '../../hoc/Auxiliary';
 const HomePage = () => {
      
     return (
-        <Aux>
-            <header>
+        <>
+            <header className="home-page-head">
                 <nav>
                     <ul>
                         <li>
-                        <Link to="/signup">SignUp</Link>
+                            <NavLink to="/signup">SignUp</NavLink>
                         </li>
                         <li>
-                        <Link to="/login">Login</Link>
+                            <NavLink to="/login">Login</NavLink>
                         </li>
-                        
                     </ul>
                 </nav>
             </header>
-        </Aux>
+        </>
     );
 
 }
