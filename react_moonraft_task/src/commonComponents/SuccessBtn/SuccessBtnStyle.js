@@ -6,10 +6,15 @@ export const StyledBtn = styled.button`
     height: 50px;
     border-radius: 1.5px;
     background-color: #3fb485;
-    color: ${props => props.name};
-
+    display:flex;
+    justify-content:center;
+    margin:5px auto;
     &:hover {
         background-color: #f7f7f7;
         color: black;
+    }
+
+    @media only screen and (max-width:575px) {
+        width: 220px;
     }
 `

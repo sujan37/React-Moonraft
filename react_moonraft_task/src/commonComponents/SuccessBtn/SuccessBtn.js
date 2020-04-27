@@ -2,9 +2,11 @@ import React from 'react';
 import { StyledBtn } from './SuccessBtnStyle';
 
 
-const SuccessBtn = () => {
+const SuccessBtn = (props) => {
     return (
-        <StyledBtn >Login</StyledBtn>
+        <StyledBtn>
+            {props.name}
+        </StyledBtn>
     );
 
 }

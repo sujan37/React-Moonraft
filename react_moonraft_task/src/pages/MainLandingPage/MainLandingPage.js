@@ -1,13 +1,29 @@
 import React from 'react';
 // import Aux from '../../hoc/Auxiliary';
-import { StyledBtn } from './MainlandingPageStyle';
+import { FlexContainer } from './MainlandingPageStyle';
+import Header from './components/Header/Header';
+import ExpenseCard from './components/ExpenseCard/ExpenseCard';
+import TaskDrpdwn from './components/TaskDrpdwn/TaskDrpdwn';
+import Transaction from './components/Transaction/Transaction';
 
 
 const MainLandingPage = () => {
      
     return (
         <>
-            <div>Main Landing Page Component HERE</div>
+            <main>
+                <Header/>
+                <FlexContainer>
+                    <ExpenseCard/>
+                    <ExpenseCard/>
+                    <ExpenseCard/>
+                    <ExpenseCard/>
+                </FlexContainer>
+
+                <div>
+                    <Transaction/>
+                </div>
+            </main>
         </>
     );
 

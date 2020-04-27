@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import axios from 'axios';
+import 'font-awesome/css/font-awesome.min.css';
+
 
 axios.defaults.baseURL = 'www.google.com';
 axios.defaults.headers.common['Authorization'] = 'AUTH TOKEN';

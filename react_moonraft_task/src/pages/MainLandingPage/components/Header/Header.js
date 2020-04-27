@@ -1,13 +1,25 @@
 import React from 'react';
 // import Aux from '../../hoc/Auxiliary'; 
-import { StyledBtn } from './HeaderStyle';
+import { OuterWrap,UserInfo,Bar,TransactionMonth,Name } from './HeaderStyle';
+import UserImg from '../../../../commonComponents/UserImg/UserImg';
 
 
 const Header = () => {
      
     return (
         <>
-            <div>Header Component HERE</div>
+            <OuterWrap>
+                <UserInfo>
+                    <UserImg isSmall/>
+                    <Name>Joel George</Name>
+                </UserInfo>
+                <TransactionMonth>JANUARY</TransactionMonth>
+                <div>
+                    <Bar></Bar>
+                    <Bar></Bar>
+                    <Bar></Bar>
+                </div>
+            </OuterWrap>
         </>
     );
 

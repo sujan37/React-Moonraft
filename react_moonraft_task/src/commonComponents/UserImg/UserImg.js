@@ -1,15 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
 import userimg from '../../assests/Ellipse.jpg';
-
+import {UserImgStyle} from './UserImgStyle';
 // import Aux from '../../hoc/Auxiliary';
 
 
-const UserImg = () => {
+const UserImg = (props) => {
      
     return (
         <>
-            <div><img src={userimg} alt="Logo" /></div>
+            <UserImgStyle isSmall={props.isSmall}><img src={userimg} alt="Logo" /></UserImgStyle>
         </>
     );
 
