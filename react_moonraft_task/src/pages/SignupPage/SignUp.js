@@ -9,12 +9,12 @@ const SignUp = (props) => {
     return (
         <>
             <BlackWrap>
-                <label for="userName">User Name:</label>
+                <label htmlFor="userName">User Name:</label>
                 <UserInput type='text' 
                     name='userName' 
                     id='userName'
                 />
-                <label for="password">Password:</label>
+                <label htmlFor="password">Password:</label>
                 <UserInput type='password' 
                     name='password' 
                     id='password'

@@ -68,17 +68,17 @@ const Transaction = () => {
                         </button>
                     </div>
                     <div className="modal-body">
-                    <label for="Date">Date:</label>
+                    <label htmlFor="Date">Date:</label>
                     <UserInput type='text' 
                         name='Date' 
                         id='Date'
                     />
-                    <label for="Amount">Amount:</label>
+                    <label htmlFor="Amount">Amount:</label>
                     <UserInput type='text' 
                         name='Amount' 
                         id='Amount'
                     />
-                    <label for="Description">Description:</label>
+                    <label htmlFor="Description">Description:</label>
                     <UserInput type='text' 
                         name='Description' 
                         id='Description'

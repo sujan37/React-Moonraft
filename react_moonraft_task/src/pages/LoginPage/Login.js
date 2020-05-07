@@ -4,18 +4,35 @@ import React, { Component }  from 'react';
 import UserImg from '../../commonComponents/UserImg/UserImg';
 import SuccessBtn from '../../commonComponents/SuccessBtn/SuccessBtn';
 import { BlackWrap,UserInfo,UserInput } from  './LoginStyle';
-import MainLandingPage from '../MainLandingPage/MainLandingPage';
-import {BrowserRouter,Route,Router,Link,NavLink,Switch} from 'react-router-dom';
-import { browserHistory } from 'react-router';
+import MainLandingPage from '../../pages/MainLandingPage/MainLandingPage';
+import {Route,Switch} from 'react-router-dom';
+import asyncComponent from '../../hoc/asyncComponent'
+
+const AsyncMainLandingPage = asyncComponent(() => {
+    return import('../../pages/MainLandingPage/MainLandingPage');
+});
 
 
 class Login extends Component {
 
-  
+    constructor(props) {
+        super(props);
 
-    reDirectToLanding = () => {
-        browserHistory.push('/login/Landing'); 
+        this.state = {
+            auth: true
+        }
     }
+
+
+    
+
+
+    reDirectToLanding = (props) => {
+        console.log('here in login page');
+        this.props.history.push('/Landing');
+    }
+
+    
     render () {
   
         return (
@@ -26,13 +43,15 @@ class Login extends Component {
                     <UserInfo>joel@gmail.com</UserInfo>
 
 
-                    <label for="password">Password:</label>
+                    <label htmlFor="password">Password:</label>
                     <UserInput type='password' 
                         name='password' 
                         id='password'
                     />
-                    <SuccessBtn onClick={this.reDirectToLanding} name="Login"/>
-                    <Route path="/login/Landing" component={MainLandingPage} />
+                    <SuccessBtn reDirectToLanding={this.reDirectToLanding} name="Login"/>
+                    {/* <Route path="/Landing" exact component={MainLandingPage} /> */}
+
+                    {this.state.auth ? <Route path="/Landing" component={AsyncMainLandingPage} /> : null}
                 </BlackWrap>
             </>
         );

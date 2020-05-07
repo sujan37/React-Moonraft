@@ -4,7 +4,7 @@ import { StyledBtn } from './SuccessBtnStyle';
 
 const SuccessBtn = (props) => {
     return (
-        <StyledBtn>
+        <StyledBtn onClick={props.reDirectToLanding}>
             {props.name}
         </StyledBtn>
     );
