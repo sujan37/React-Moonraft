@@ -5,12 +5,14 @@ import UserImg from '../../commonComponents/UserImg/UserImg';
 import SuccessBtn from '../../commonComponents/SuccessBtn/SuccessBtn';
 import { BlackWrap,UserInfo,UserInput } from  './LoginStyle';
 import MainLandingPage from '../../pages/MainLandingPage/MainLandingPage';
-import {Route,Switch} from 'react-router-dom';
-import asyncComponent from '../../hoc/asyncComponent'
+import {Route,Switch,Redirect} from 'react-router-dom';
 
-const AsyncMainLandingPage = asyncComponent(() => {
-    return import('../../pages/MainLandingPage/MainLandingPage');
-});
+
+// import asyncComponent from '../../hoc/asyncComponent'
+
+// const AsyncMainLandingPage = asyncComponent(() => {
+//     return import('../../pages/MainLandingPage/MainLandingPage');
+// });
 
 
 class Login extends Component {
@@ -30,6 +32,7 @@ class Login extends Component {
     reDirectToLanding = (props) => {
         console.log('here in login page');
         this.props.history.push('/Landing');
+        // return <Redirect to="/Landing" />;
     }
 
     
@@ -51,7 +54,7 @@ class Login extends Component {
                     <SuccessBtn reDirectToLanding={this.reDirectToLanding} name="Login"/>
                     {/* <Route path="/Landing" exact component={MainLandingPage} /> */}
 
-                    {this.state.auth ? <Route path="/Landing" component={AsyncMainLandingPage} /> : null}
+                    {/* {this.state.auth ? <Route path="/Landing" component={AsyncMainLandingPage} /> : null} */}
                 </BlackWrap>
             </>
         );
