@@ -50,8 +50,16 @@ class App extends Component {
     //     </Switch>
     //   );
     // }
+
+
+    // if (!this.props.isAuthenticated) {
+
+    // }
    
-  
+    let authRedirect = null;
+    if(!this.props.isAuthenticated){
+        authRedirect = <Redirect to="/Login" />
+    }
     
 
     return (
@@ -59,10 +67,10 @@ class App extends Component {
         <div>
            {/* <HomePage/> */}
 
-          
+          {authRedirect}
           <Switch>
             {/* <Route path="/" exact component={} /> */}
-            <Route path="/" exact component={Login} />
+            {/* <Route path="/" exact component={Login} /> */}
             <Route path="/login" exact component={Login} />
             <Route path="/signup" component={SignUp} />
             {/* <Route path="/Landing" component={AsyncMainLandingPage} /> */}

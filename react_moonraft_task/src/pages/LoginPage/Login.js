@@ -55,12 +55,25 @@ class Login extends Component {
         }
     }
 
+
+   
+
     
     render () {
-  
+
+        let errorMessage = null;
+
+        if (this.props.error) {
+            errorMessage = (
+                <p>{this.props.error.message}</p>
+            );
+        }
+
+        
         return (
             <>
                 <BlackWrap>
+                    <div className="auth-error-msg">{errorMessage}</div>
                     {/* <UserImg/> */}
                     {/* <UserInfo>Joel George</UserInfo>
                     <UserInfo>joel@gmail.com</UserInfo> */}
@@ -85,7 +98,7 @@ class Login extends Component {
                     {/* <Route path="/Landing" exact component={MainLandingPage} /> */}
 
                     {/* {this.state.auth ? <Route path="/Landing" component={AsyncMainLandingPage} /> : null} */}
-                    <Link to="/signup">Register for SignUp</Link>
+                    <Link className="auth-links" to="/signup">Not Regisered yet ? SignUp</Link>
 
                 </BlackWrap>
             </>

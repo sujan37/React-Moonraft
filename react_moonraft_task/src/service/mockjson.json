@@ -1,0 +1,29 @@
+{
+	"Income" : {
+		"name":"Income",
+		"totalAmt":100,
+		"amtspent": 80,
+        "graph": null,
+        "incomeShow":true,
+		"category":{
+			"payback": "1000",
+            "others": "2000",
+            "totalsubamt":false
+		}
+
+	},
+	"Expenses" :{
+		"name":"Expenses",
+		"totalAmt":30,
+		"amtspent": 123,
+        "graph": null,
+        "expenseShow": true,
+		"category":{
+			"Transportation": "3000",
+            "Electricity": "4000",
+            "transportSubAmt":"5000",
+            "elecSubAmt":"6000",
+            "totalsubamt":true
+		}
+	}
+}

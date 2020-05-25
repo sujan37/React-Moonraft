@@ -9,4 +9,6 @@ const axiosInstance = axios.create({
 
 // instance.defaults.headers.common['Authorization'] = 'AUTH TOKEN FROM INSTANCE';
 
+
+
 export default axiosInstance

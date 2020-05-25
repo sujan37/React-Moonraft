@@ -43,3 +43,20 @@ main {
 .header-end div {
   margin-left: 10px;
 }
+
+.auth-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.auth-error-msg {
+  color: red;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-body label {
+  display: flex;
+  justify-content: center;
+}

@@ -4,16 +4,16 @@ import React from 'react';
 import { CardOuterWrap,CardinnerWrap,CardinnerWrapHead,CardSubHead,CardSubDetail,MainAmt,SubAmt } from './ExpendeCardStyle';
 
 
-const ExpenseCard = () => {
-     
+const ExpenseCard = (props) => {
+   
     return (
         <>
             <CardOuterWrap>
                 <ul>
                     <CardinnerWrapHead>
                         <div>
-                            <CardSubHead>EXPENSES</CardSubHead>
-                            <div><MainAmt>4500</MainAmt>/<SubAmt>12000</SubAmt></div>
+                            <CardSubHead>{props.cardhead}</CardSubHead>
+                            <div><MainAmt>{props.amtspent}</MainAmt>/<SubAmt>{props.totalamt}</SubAmt></div>
                         </div>
                         <div>Graph</div>
                     </CardinnerWrapHead>
@@ -23,20 +23,40 @@ const ExpenseCard = () => {
                         <CardSubHead>Spent</CardSubHead>
                     </CardinnerWrap>
 
-                    <CardinnerWrap>
-                        <CardSubDetail>others</CardSubDetail>
-                        <div><MainAmt>4500</MainAmt>/<SubAmt>12000</SubAmt></div>
-                    </CardinnerWrap>
-                    
-                    <CardinnerWrap>
-                        <CardSubDetail>others</CardSubDetail>
-                        <div><MainAmt>4500</MainAmt>/<SubAmt>12000</SubAmt></div>
-                    </CardinnerWrap>
+                    {props.incomeShow && 
+                        <>
+                            <CardinnerWrap>
+                                <CardSubDetail>paycheck</CardSubDetail>
+                                <div><MainAmt>{props.categoryPayback}</MainAmt><SubAmt>{props.categoryamtCheck ?  12000 : null}</SubAmt></div>
+                            </CardinnerWrap>
+                            
+                            <CardinnerWrap>
+                                <CardSubDetail>others</CardSubDetail>
+                                <div><MainAmt>{props.categoryOthers}</MainAmt><SubAmt>{props.categoryamtCheck ?  12000 : null}</SubAmt></div>
+                            </CardinnerWrap>
+                        </>   
+                    }
 
-                    <CardinnerWrap>
+
+                    {props.expenseShow && 
+                        <>
+                            <CardinnerWrap>
+                                <CardSubDetail>Transportation</CardSubDetail>
+                                <div><MainAmt>{props.transAmt}</MainAmt><SubAmt>{props.categoryamtCheck ? "/"+ props.categoryamt1 : null}</SubAmt></div>
+                            </CardinnerWrap>
+                            
+                            <CardinnerWrap>
+                                <CardSubDetail>Electricity</CardSubDetail>
+                                <div><MainAmt>{props.elecAmt}</MainAmt><SubAmt>{props.categoryamtCheck ?  "/"+props.categoryamt2 : null}</SubAmt></div>
+                            </CardinnerWrap>
+                        </>   
+                    }
+                        
+
+                    {/* <CardinnerWrap>
                         <CardSubDetail>others</CardSubDetail>
                         <div><MainAmt>4500</MainAmt>/<SubAmt>12000</SubAmt></div>
-                    </CardinnerWrap>
+                    </CardinnerWrap> */}
                 </ul>
             </CardOuterWrap>
         </>

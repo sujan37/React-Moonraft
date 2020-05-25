@@ -33,9 +33,17 @@ class SignUp extends Component {
     }
 
     render() {
+        let errorMessage = null;
+
+        if (this.props.error) {
+            errorMessage = (
+                <p>{this.props.error.message}</p>
+            );
+        }
         return (
             <>
                 <BlackWrap>
+                <div className="auth-error-msg">{errorMessage}</div>
                     <form onSubmit={this.submitHandler}>
                         <label htmlFor="userName">User Name:</label>
                         <UserInput type='text' 
@@ -53,7 +61,7 @@ class SignUp extends Component {
                         />
                         <SuccessBtn type="submit" name="Sign Up"/>
                     </form>
-                    <Link to="/login">Login</Link>
+                    <Link className="auth-links" to="/login">Already Registered ? Login</Link>
                 </BlackWrap>
             </>
 

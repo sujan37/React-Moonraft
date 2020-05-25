@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const BlackWrap = styled.div`
     background-color: #181c28;
     color: #ffffff;
-    margin: 20px 0px;
+    /* margin: 20px 0px; */
     padding: 25px;
     &:UserImg {
         display: flex;
