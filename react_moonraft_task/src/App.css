@@ -35,3 +35,11 @@ main {
   background-color: #181c28;
 }
 
+
+.header-end {
+  display: flex;
+}
+
+.header-end div {
+  margin-left: 10px;
+}

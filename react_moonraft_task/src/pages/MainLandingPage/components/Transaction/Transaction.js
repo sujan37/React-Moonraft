@@ -14,16 +14,16 @@ const Transaction = () => {
         <>
             <TransactionWrap>
                 <TransactionHeadWrap>
-                    <CardSubHead>EXPENSES</CardSubHead>
+                    <CardSubHead>TRANSACTIONS</CardSubHead>
                     <TaskDrpdwn/>
                 </TransactionHeadWrap>
                 <table className="table table-hover">
                     <thead>
                     <tr>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                        <th>Email</th>
-                        <th>Email</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Description</th>
+                        <th>Catagory</th>
                     </tr>
                     </thead>
                     <tbody>
