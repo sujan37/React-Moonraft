@@ -21,7 +21,7 @@ class Header extends Component {
         const {navigate} = this.state;
 
         if (navigate) {
-            return <Redirect to='/' push={true} />
+            return <Redirect to='/Login' push={true} />
         }
 
         return (
