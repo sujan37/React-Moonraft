@@ -6,9 +6,9 @@ import Login from '../LoginPage/Login';
 import MainLandingPage from '../MainLandingPage/MainLandingPage';
 import asyncComponent from '../../hoc/asyncComponent'
 
-const AsyncMainLandingPage = asyncComponent(() => {
-    return import('../MainLandingPage/MainLandingPage');
-});
+// const AsyncMainLandingPage = asyncComponent(() => {
+//     return import('../MainLandingPage/MainLandingPage');
+// });
 
 const HomePageHead = () => {
 

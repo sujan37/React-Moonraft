@@ -1,5 +1,4 @@
 import React, { Component }  from 'react';
-// import Aux from '../../hoc/Auxiliary';
 import {NavLink,Link} from 'react-router-dom';
 
 import UserImg from '../../commonComponents/UserImg/UserImg';
@@ -11,12 +10,6 @@ import {Route,Switch,Redirect} from 'react-router-dom';
 import * as actions from '../../store/actions/index';
 import { connect } from 'react-redux';
 
-
-// import asyncComponent from '../../hoc/asyncComponent'
-
-// const AsyncMainLandingPage = asyncComponent(() => {
-//     return import('../../pages/MainLandingPage/MainLandingPage');
-// });
 
 
 class Login extends Component {
@@ -95,9 +88,7 @@ class Login extends Component {
                         />
                         <SuccessBtn  type="submit" name="Login"/>
                     </form>
-                    {/* <Route path="/Landing" exact component={MainLandingPage} /> */}
 
-                    {/* {this.state.auth ? <Route path="/Landing" component={AsyncMainLandingPage} /> : null} */}
                     <Link className="auth-links" to="/signup">Not Regisered yet ? SignUp</Link>
 
                 </BlackWrap>

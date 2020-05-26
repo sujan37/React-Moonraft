@@ -7,7 +7,6 @@ const axiosInstance = axios.create({
     baseURL = 'https://react-task-moonraft-0.firebaseio.com/'
 });
 
-// instance.defaults.headers.common['Authorization'] = 'AUTH TOKEN FROM INSTANCE';
 
 
 
